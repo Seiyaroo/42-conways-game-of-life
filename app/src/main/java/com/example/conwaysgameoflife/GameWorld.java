@@ -12,7 +12,7 @@ public class GameWorld {
     public int height;
     private static Cell[][] board;
 
-    public void World(int width, int height) {
+    public GameWorld(int width, int height) {
         this.width = width;
         this.height = height;
         board = new Cell[width][height];

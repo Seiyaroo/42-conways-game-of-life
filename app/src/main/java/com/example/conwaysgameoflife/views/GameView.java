@@ -92,6 +92,7 @@ public class GameView extends SurfaceView implements Runnable {
         rowHeight = point.y / nbRows;
 
         world = new GameWorld(nbColumns, nbRows);
+
     }
 
     private void drawCells(Canvas canvas) {
