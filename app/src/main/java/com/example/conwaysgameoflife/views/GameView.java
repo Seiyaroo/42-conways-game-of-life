@@ -91,13 +91,13 @@ public class GameView extends SurfaceView implements Runnable {
         columnWidth = point.x / nbColumns;
         rowHeight = point.y / nbRows;
 
-        world = new World(nbColumns, nbRows);
+        world = new GameWorld(nbColumns, nbRows);
     }
 
     private void drawCells(Canvas canvas) {
         for (int i = 0; i < nbColumns; i++) {
             for (int j = 0; j < nbRows; j++) {
-                Cell cell = World.get(i, j);
+                Cell cell = GameWorld.get(i, j);
                 rect.set((cell.x * columnWidth) - 1, (cell.y * rowHeight) - 1,
                         (cell.x * columnWidth + columnWidth) - 1,
                         (cell.y * rowHeight + rowHeight) - 1);

@@ -10,7 +10,7 @@ public class GameWorld {
     public static final Random RANDOM = new Random();
     public int width;
     public int height;
-    private Cell[][] board;
+    private static Cell[][] board;
 
     public void World(int width, int height) {
         this.width = width;
@@ -21,13 +21,13 @@ public class GameWorld {
 
     private void init() {
         for (int i = 0; i < width; i++) {
-            for (int j = 0 j < height; j++) {
+            for (int j = 0; j < height; j++) {
                 board[i][j] = new Cell(i, j, RANDOM.nextBoolean());
             }
         }
     }
 
-    public Cell get(int i, int j) {
+    public static Cell get(int i, int j) {
         return board[i][j];
     }
 
@@ -57,11 +57,10 @@ public class GameWorld {
 
                 int nbNeighbors = nbNeighborsOf(cell.x, cell.y);
 
-                // rule 1 & rule 3
                 if (cell.live && (nbNeighbors < 2 || nbNeighbors > 3)) {
                     dyingCells.add(cell);
                 }
-                // rule 2 & rule 4
+
                 if ((cell.live && (nbNeighbors == 3 || nbNeighbors == 2)) || (!cell.live && nbNeighbors == 3)) {
                     livingCells.add(cell);
                 }
