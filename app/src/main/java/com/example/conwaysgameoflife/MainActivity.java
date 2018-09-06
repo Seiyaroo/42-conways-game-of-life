@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.example.conwaysgameoflife.views.GameView;
 
 public class MainActivity extends AppCompatActivity {
+
     private GameView gameofLifeView;
 
     @Override

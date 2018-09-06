@@ -17,8 +17,10 @@ import com.example.conwaysgameoflife.models.Cell;
 
 public class GameView extends SurfaceView implements Runnable {
     public static final int DEFAULT_SIZE = 100;
-    public static final int DEFAULT_LIVING_COLOR = Color.WHITE;
-    public static final int DEFAULT_DEAD_COLOR = Color.BLACK;
+    //Default color is white for a living square
+    public static final int DEFAULT_LIVING_COLOR = Color.RED;
+    //Default color of a dead square.
+    public static final int DEFAULT_DEAD_COLOR = Color.BLUE;
 
     private Thread thread;
 
