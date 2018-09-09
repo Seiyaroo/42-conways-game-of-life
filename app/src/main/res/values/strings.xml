@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ConwaysGameOfLife</string>
+    <string name="tick">tick</string>
+    <string name="reset">reset</string>
+    <string name="_0">0</string>
 </resources>
